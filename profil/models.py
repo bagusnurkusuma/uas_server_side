@@ -22,3 +22,11 @@ class Barang(models.Model):
     def __str__(self):
 
         return self.nama
+    
+class About(models.Model):
+    judul = models.CharField()
+    isi = models.TextField()
+    image = models.ImageField(upload_to='')
+
+    def __str__(self):
+        return self.judul

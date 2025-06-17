@@ -1,7 +1,9 @@
 from django.shortcuts import render
+from . models import About
 
 def home(request):
-    return render(request,'index.html')
+    about = About.objects.first()
+    return render(request,'index.html', {'about':about})
 
 def aboutme(request):
     return render(request,'profil/index.html')
