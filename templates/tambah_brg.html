@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}
+tambah barang
+{% endblock title %} 
+
+{% block isi %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h4 class="mb-0">Form Tambah Barang</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post">
+                        {% csrf_token %}
+                        {{ form_brg.as_p }}
+                        <div class="text-end">
+                            <button type="submit" class="btn btn-primary">Tambah</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock isi %}
